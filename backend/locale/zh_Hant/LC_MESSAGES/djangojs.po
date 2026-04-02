@@ -1,0 +1,231 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-01 15:13+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: static/js/dashboard.js:16
+msgid "從未執行"
+msgstr ""
+
+#: static/js/dashboard.js:27
+msgid "處理中..."
+msgstr ""
+
+#: static/js/dashboard.js:27
+msgid "立即執行"
+msgstr ""
+
+#: static/js/dashboard.js:44
+msgid "來源適配器"
+msgstr ""
+
+#: static/js/dashboard.js:48
+msgid "排程時間"
+msgstr ""
+
+#: static/js/dashboard.js:49
+msgid "手動觸發"
+msgstr ""
+
+#: static/js/dashboard.js:52
+msgid "最後執行"
+msgstr ""
+
+#: static/js/dashboard.js:58
+msgid "追蹤股票代號"
+msgstr ""
+
+#: static/js/dashboard.js:90
+msgid "目前尚未設定任何爬蟲任務"
+msgstr ""
+
+#: static/js/dashboard.js:91
+msgid "建立您的第一個任務"
+msgstr ""
+
+#: static/js/dashboard.js:101
+msgid "載入工作清單失敗，請檢查網路連線。"
+msgstr ""
+
+#: static/js/dashboard.js:108
+msgid "確定要刪除此任務嗎？此動作無法復原。"
+msgstr ""
+
+#: static/js/dashboard.js:117
+msgid "已刪除"
+msgstr ""
+
+#: static/js/dashboard.js:117
+msgid "爬蟲任務已成功移除。"
+msgstr ""
+
+#: static/js/dashboard.js:120
+msgid "錯誤"
+msgstr ""
+
+#: static/js/dashboard.js:120
+msgid "無法刪除任務，請稍後再試。"
+msgstr ""
+
+#: static/js/dashboard.js:134
+msgid "啟動中..."
+msgstr ""
+
+#: static/js/dashboard.js:138
+msgid "任務已發送"
+msgstr ""
+
+#: static/js/dashboard.js:138
+msgid "爬蟲編號"
+msgstr ""
+
+#: static/js/dashboard.js:138
+msgid "已加入 Celery 工作隊列。"
+msgstr ""
+
+#: static/js/dashboard.js:142
+msgid "任務啟動失敗，請檢查系統狀態。"
+msgstr ""
+
+#: static/js/dashboard.js:143
+msgid "連線錯誤"
+msgstr ""
+
+#: static/js/error_logs.js:57
+msgid "目前沒有錯誤記錄，系統運行正常。"
+msgstr ""
+
+#: static/js/error_logs.js:69
+msgid "點擊展開 Traceback"
+msgstr ""
+
+#: static/js/error_logs.js:84
+msgid "載入錯誤記錄失敗。"
+msgstr ""
+
+#: static/js/settings.js:17
+msgid "選取股票於此顯示..."
+msgstr ""
+
+#: static/js/settings.js:136
+msgid "請至少輸入一個股票代碼（代號）。"
+msgstr ""
+
+#: static/js/settings.js:142
+msgid "儲存中..."
+msgstr ""
+
+#: static/js/settings.js:159
+msgid "任務已成功建立！"
+msgstr ""
+
+#: static/js/settings.js:162
+msgid "儲存失敗，請檢查系統連線。"
+msgstr ""
+
+#: static/js/stock_chart.js:31
+msgid "檔"
+msgstr ""
+
+#: static/js/stock_chart.js:37
+msgid "No tasks found"
+msgstr ""
+
+#: static/js/stock_chart.js:41
+msgid "無法載入任務"
+msgstr ""
+
+#: static/js/stock_chart.js:50
+msgid "載入數據中..."
+msgstr ""
+
+#: static/js/stock_chart.js:68
+msgid "載入失敗"
+msgstr ""
+
+#~ msgid "Processing..."
+#~ msgstr "處理中..."
+
+#~ msgid "Run Now"
+#~ msgstr "立即執行"
+
+#~ msgid "Adapter:"
+#~ msgstr "抓取源:"
+
+#~ msgid "Schedule:"
+#~ msgstr "排程時間:"
+
+#~ msgid "Manual"
+#~ msgstr "手動"
+
+#~ msgid "Last Run:"
+#~ msgstr "最後執行:"
+
+#~ msgid "Tracking Symbols"
+#~ msgstr "追蹤代號"
+
+#~ msgid "No crawlers configured"
+#~ msgstr "尚未配置任何爬蟲任務"
+
+#~ msgid "Create Your First Task"
+#~ msgstr "建立您的第一個任務"
+
+#~ msgid "Failed to load crawlers. Check console."
+#~ msgstr "爬蟲任務載入失敗，請檢查終端或網路。"
+
+#~ msgid "Triggering..."
+#~ msgstr "觸發中..."
+
+#~ msgid "Task Initiated"
+#~ msgstr "任務已啟動"
+
+#~ msgid "Crawler #"
+#~ msgstr "爬蟲任務 #"
+
+#~ msgid "was added to the queue."
+#~ msgstr "已加入背景佇列。"
+
+#~ msgid "Failed to trigger task."
+#~ msgstr "任務觸發失敗。"
+
+#~ msgid "Error"
+#~ msgstr "錯誤"
+
+#~ msgid "Saving..."
+#~ msgstr "儲存中..."
+
+#~ msgid "You must enter at least one symbol."
+#~ msgstr "您必須輸入至少一個股票代號。"
+
+#~ msgid "Task configuration created successfully!"
+#~ msgstr "任務配置建立成功！"
+
+#~ msgid "Failed to create task."
+#~ msgstr "建立任務失敗。"
+
+#~ msgid "No Active Symbols"
+#~ msgstr "尚無活躍的股票代號"
+
+#~ msgid "Failed to load prices"
+#~ msgstr "股價資料載入失敗"
+
+#~ msgid "Close Price"
+#~ msgstr "收盤價"
+
+#~ msgid "System Offline (API Error)"
+#~ msgstr "系統離線 (API異常)"

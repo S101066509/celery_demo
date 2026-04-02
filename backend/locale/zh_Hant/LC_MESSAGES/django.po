@@ -1,0 +1,303 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-01 18:06+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: config/settings.py:75
+msgid "Traditional Chinese"
+msgstr ""
+
+#: config/settings.py:76
+msgid "English"
+msgstr ""
+
+#: static/templates/base.html:44
+msgid "股價資訊平台"
+msgstr ""
+
+#: static/templates/base.html:51
+msgid "即時儀表板"
+msgstr ""
+
+#: static/templates/base.html:57
+msgid "數據任務管理"
+msgstr ""
+
+#: static/templates/base.html:63
+msgid "行情趨勢分析"
+msgstr ""
+
+#: static/templates/base.html:69 static/templates/stocks/error_logs.html:4
+msgid "錯誤記錄"
+msgstr ""
+
+#: static/templates/base.html:77
+msgid "System Online"
+msgstr "系統已連線"
+
+#: static/templates/base.html:85
+msgid "Dashboard"
+msgstr "儀表板"
+
+#: static/templates/stocks/charts.html:4
+msgid "股價趨勢"
+msgstr ""
+
+#: static/templates/stocks/charts.html:16
+msgid "數據篩選"
+msgstr ""
+
+#: static/templates/stocks/charts.html:19
+msgid "爬蟲任務:"
+msgstr ""
+
+#: static/templates/stocks/charts.html:21
+msgid "載入任務中..."
+msgstr ""
+
+#: static/templates/stocks/charts.html:24
+#: static/templates/stocks/error_logs.html:27
+msgid "重新載入"
+msgstr ""
+
+#: static/templates/stocks/charts.html:37
+msgid "最新收盤"
+msgstr ""
+
+#: static/templates/stocks/charts.html:44
+msgid "最高價"
+msgstr ""
+
+#: static/templates/stocks/charts.html:50
+msgid "最低價"
+msgstr ""
+
+#: static/templates/stocks/charts.html:56
+msgid "漲跌幅"
+msgstr ""
+
+#: static/templates/stocks/dashboard.html:4
+msgid "任務列表"
+msgstr ""
+
+#: static/templates/stocks/dashboard.html:9
+msgid "建立新任務"
+msgstr ""
+
+#: static/templates/stocks/dashboard.html:15
+msgid "系統啟動中..."
+msgstr ""
+
+#: static/templates/stocks/dashboard.html:25
+msgid "成功"
+msgstr ""
+
+#: static/templates/stocks/dashboard.html:29
+msgid "操作已完成。"
+msgstr ""
+
+#: static/templates/stocks/error_logs.html:16
+msgid "系統錯誤記錄"
+msgstr ""
+
+#: static/templates/stocks/error_logs.html:19
+msgid "等級:"
+msgstr ""
+
+#: static/templates/stocks/error_logs.html:21
+msgid "全部"
+msgstr ""
+
+#: static/templates/stocks/error_logs.html:22
+msgid "WARNING"
+msgstr ""
+
+#: static/templates/stocks/error_logs.html:23
+msgid "ERROR"
+msgstr ""
+
+#: static/templates/stocks/error_logs.html:24
+msgid "CRITICAL"
+msgstr ""
+
+#: static/templates/stocks/error_logs.html:42
+msgid "時間"
+msgstr ""
+
+#: static/templates/stocks/error_logs.html:43
+msgid "等級"
+msgstr ""
+
+#: static/templates/stocks/error_logs.html:44
+msgid "來源"
+msgstr ""
+
+#: static/templates/stocks/error_logs.html:45
+msgid "關聯任務"
+msgstr ""
+
+#: static/templates/stocks/error_logs.html:46
+msgid "訊息"
+msgstr ""
+
+#: static/templates/stocks/error_logs.html:53
+msgid "載入中..."
+msgstr ""
+
+#: static/templates/stocks/settings.html:4
+msgid "建立任務"
+msgstr ""
+
+#: static/templates/stocks/settings.html:15
+msgid "Task Configuration"
+msgstr "任務配置"
+
+#: static/templates/stocks/settings.html:21
+msgid "Task Name"
+msgstr "任務名稱"
+
+#: static/templates/stocks/settings.html:25
+msgid "A recognizable name for your crawler task."
+msgstr "為您的爬蟲任務命名以方便辨識。"
+
+#: static/templates/stocks/settings.html:31
+msgid "Adapter Target"
+msgstr "抓取目標源"
+
+#: static/templates/stocks/settings.html:34
+msgid "Yahoo Finance (US/Global)"
+msgstr "Yahoo Finance (美股/全球)"
+
+#: static/templates/stocks/settings.html:35
+msgid "Taiwan Stock Exchange (TWSE)"
+msgstr "台灣證券交易所 (台股)"
+
+#: static/templates/stocks/settings.html:40
+msgid "Schedule Time (Optional)"
+msgstr "排程時間 (選填)"
+
+#: static/templates/stocks/settings.html:43
+msgid "Leave empty for manual triggering only."
+msgstr "留空則僅能手動觸發。"
+
+#: static/templates/stocks/settings.html:49
+msgid "股票搜尋"
+msgstr "股票搜尋"
+
+#: static/templates/stocks/settings.html:55
+msgid "輸入代號或名稱..."
+msgstr "輸入代號或名稱..."
+
+#: static/templates/stocks/settings.html:64
+msgid "選取股票於此顯示..."
+msgstr "選取股票於此顯示..."
+
+#: static/templates/stocks/settings.html:68
+msgid "搜尋全球股市或輸入代號並按 Enter 即可加入標籤。"
+msgstr "搜尋全球股市或輸入代號並按 Enter 即可加入標籤。"
+
+#: static/templates/stocks/settings.html:76
+msgid "啟用定時自動抓取"
+msgstr "啟用定時自動抓取"
+
+#: static/templates/stocks/settings.html:79
+msgid "開啟後，系統將依據您設定的時間帶自動每日更新。若關閉，則僅能手動觸發。"
+msgstr "開啟後，系統將依據您設定的時間帶自動每日更新。若關閉，則僅能手動觸發。"
+
+#: static/templates/stocks/settings.html:85
+msgid "Cancel"
+msgstr "取消"
+
+#: static/templates/stocks/settings.html:87
+msgid "Create Config"
+msgstr "建立配置"
+
+#: stocks/views.py:64
+msgid "Task not found."
+msgstr ""
+
+#: stocks/views.py:69
+msgid ""
+"Task is already currently running. Please wait preventing duplicate "
+"execution."
+msgstr ""
+
+#: stocks/views.py:85
+msgid "Failed to queue task. System connection issue."
+msgstr ""
+
+#: stocks/views.py:90
+msgid "Task received and is processing asynchronously."
+msgstr ""
+
+#~ msgid "Settings - Antigravity Trader"
+#~ msgstr "設定 - Antigravity Trader"
+
+#~ msgid "Create Crawler Task"
+#~ msgstr "建立爬蟲任務"
+
+#~ msgid "Analytics - Antigravity Trader"
+#~ msgstr "趨勢分析 - Antigravity Trader"
+
+#~ msgid "Price Analytics"
+#~ msgstr "股價趨勢分析"
+
+#~ msgid "Antigravity Trader"
+#~ msgstr "Antigravity Trader"
+
+#~ msgid "A.G. Trader"
+#~ msgstr "A.G. 爬蟲平台"
+
+#~ msgid "Task Settings"
+#~ msgstr "任務設定"
+
+#~ msgid "Analytics"
+#~ msgstr "趨勢分析"
+
+#~ msgid "Data Filters"
+#~ msgstr "資料篩選"
+
+#~ msgid "Symbol:"
+#~ msgstr "股票代號:"
+
+#~ msgid "Load Data First..."
+#~ msgstr "請先載入資料..."
+
+#~ msgid "Refresh"
+#~ msgstr "重新整理"
+
+#~ msgid "Active Crawlers"
+#~ msgstr "運行中的爬蟲"
+
+#~ msgid "Initializing Data Pipelines..."
+#~ msgstr "資料連線初始化中..."
+
+#~ msgid "Success"
+#~ msgstr "成功"
+
+#~ msgid "Action completed."
+#~ msgstr "操作已完成。"
+
+#~ msgid "Symbols (Comma Separated)"
+#~ msgstr "股票代號 (以半形逗點分隔)"
+
+#~ msgid "Enter stock tickers separated by commas."
+#~ msgstr "請輸入股票代號，並以逗點分隔。"
+
+#~ msgid "Enable Task Immediately"
+#~ msgstr "立即啟用任務"

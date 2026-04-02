@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block page_title %}{% trans "建立任務" %}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/settings.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-12 col-xl-8">
+        <div class="glass-card mb-5">
+            <h4 class="mb-4 d-flex align-items-center gap-2">
+                <i class="ph ph-gear"></i> {% trans "Task Configuration" %}
+            </h4>
+
+            <form id="settingsForm">
+                <div class="mb-4">
+                    <label class="form-label" for="taskName">
+                        <i class="ph ph-text-t"></i> {% trans "Task Name" %}
+                    </label>
+                    <input type="text" class="form-control form-control-glass" id="taskName"
+                        placeholder="e.g. Daily Tech Stocks Update" required>
+                    <div class="form-text text-muted">{% trans "A recognizable name for your crawler task." %}</div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <label class="form-label" for="adapterType">
+                            <i class="ph ph-plug"></i> {% trans "Adapter Target" %}
+                        </label>
+                        <select class="form-select form-control-glass" id="adapterType" required>
+                            <option value="yahoo">{% trans "Yahoo Finance (US/Global)" %}</option>
+                            <option value="twse">{% trans "Taiwan Stock Exchange (TWSE)" %}</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label" for="scheduleTime">
+                            <i class="ph ph-clock"></i> {% trans "Schedule Time (Optional)" %}
+                        </label>
+                        <input type="time" class="form-control form-control-glass" id="scheduleTime">
+                        <div class="form-text text-muted">{% trans "Leave empty for manual triggering only." %}</div>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label" for="symbolsInput">
+                        <i class="ph ph-magnifying-glass"></i> {% trans "股票搜尋" %}
+                    </label>
+                    <div class="d-flex align-items-start gap-4 stock-search-row">
+                        <!-- Left: Input with logic width -->
+                        <div class="position-relative stock-search-input" style="width: 300px; flex-shrink: 0;">
+                            <input type="text" class="form-control form-control-glass" id="symbolsInput"
+                                placeholder="{% trans '輸入代號或名稱...' %}" autocomplete="off" style="font-size: 0.85rem; height: 38px;">
+                            <div id="searchResults" class="search-results-container mt-1 p-0">
+                                <!-- Results shown here -->
+                            </div>
+                        </div>
+
+                        <!-- Right: Tags Area -->
+                        <div id="symbolTags" class="d-flex flex-wrap gap-2 pt-1 border-start ps-4 stock-search-tags"
+                            style="min-height: 38px; flex-grow: 1; border-color: rgba(255,255,255,0.1) !important;">
+                            <span class="text-muted small opacity-50 pt-1">{% trans "選取股票於此顯示..." %}</span>
+                        </div>
+                    </div>
+                    <div class="form-text text-muted mt-2" style="font-size: 0.75rem;">
+                        {% trans "搜尋全球股市或輸入代號並按 Enter 即可加入標籤。" %}
+                    </div>
+                </div>
+
+                <div class="mb-5 form-check form-switch ps-0 d-flex flex-column gap-2">
+                    <div class="d-flex align-items-center gap-3">
+                        <input class="form-check-input form-check-input-glass ms-0 mt-0" type="checkbox" role="switch"
+                            id="isActive" checked style="width: 2.5em; height: 1.25em;">
+                        <label class="form-check-label fw-bold" for="isActive" style="color: var(--text-primary);">{% trans "啟用定時自動抓取" %}</label>
+                    </div>
+                    <div class="form-text text-muted" style="margin-left: 3.25rem; font-size: 0.8rem; margin-top: -0.25rem;">
+                        {% trans "開啟後，系統將依據您設定的時間帶自動每日更新。若關閉，則僅能手動觸發。" %}
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center pt-3 border-top"
+                    style="border-color: var(--border-glass) !important;">
+                    <button type="button" class="btn btn-glass" onclick="window.history.back()">{% trans "Cancel" %}</button>
+                    <button type="submit" class="btn btn-gradient d-flex align-items-center gap-2" id="submitBtn">
+                        <i class="ph ph-plus-circle"></i> {% trans "Create Config" %}
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Alert Placeholder -->
+<div id="formAlertContainer" class="position-fixed top-0 start-50 translate-middle-x mt-4"
+    style="z-index: 1050; width: 80%; max-width: 500px;"></div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/settings.js' %}"></script>
+{% endblock %}

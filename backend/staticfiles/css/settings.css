@@ -1,0 +1,93 @@
+/**
+ * Settings Page Styles
+ */
+
+.form-control-glass, .form-select-glass {
+    background: var(--bg-surface) !important;
+    border: 1px solid var(--border-glass);
+    color: var(--text-primary) !important;
+    transition: all 0.3s ease;
+    border-radius: var(--radius-sm);
+    color-scheme: dark; /* 強制原生組件走深色 */
+}
+
+.form-control-glass:focus, .form-select-glass:focus {
+    background: var(--bg-surface);
+    border-color: var(--accent-secondary);
+    box-shadow: 0 0 0 3px var(--accent-glow-secondary);
+    color: var(--text-primary);
+    outline: none;
+}
+
+.form-label {
+    font-weight: 500;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.form-label i {
+    color: var(--accent-secondary);
+    opacity: 0.7;
+}
+
+/* Custom Checkbox Toggle */
+.form-check-input-glass:checked {
+    background-color: var(--success);
+    border-color: var(--success) !important;
+}
+
+.search-results-container {
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    max-height: 300px;
+    overflow-y: auto;
+    display: none;
+    background: var(--bg-surface);
+    color: var(--text-primary);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--card-shadow-hover);
+    border: 1px solid var(--border-glass-strong);
+    backdrop-filter: blur(12px);
+}
+
+.search-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--border-glass);
+    transition: all 0.2s;
+    font-size: 0.8rem;
+}
+
+.search-item:hover {
+    background: var(--accent-glow-secondary);
+    color: var(--accent-secondary);
+}
+
+.search-item .ticker-name {
+    font-weight: 700;
+    color: var(--accent-secondary);
+}
+
+/* Responsive layout for stock search row */
+@media (max-width: 768px) {
+    .stock-search-row {
+        flex-wrap: wrap;
+        gap: 12px !important;
+    }
+
+    .stock-search-input {
+        width: 100% !important;
+    }
+
+    .stock-search-tags {
+        width: 100%;
+        border-left: 0 !important;
+        border-top: 1px solid var(--border-glass);
+        padding-left: 0 !important;
+        padding-top: 12px !important;
+    }
+}

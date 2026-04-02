@@ -1,0 +1,250 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-01 15:13+0800\n"
+"PO-Revision-Date: 2026-04-01 15:13+0800\n"
+"Last-Translator: Antigravity\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: crawlers/views.py:63
+msgid "Task not found."
+msgstr "Task not found."
+
+#: crawlers/views.py:68
+msgid ""
+"Task is already currently running. Please wait preventing duplicate "
+"execution."
+msgstr ""
+"Task is already currently running. Please wait preventing duplicate "
+"execution."
+
+#: crawlers/views.py:74
+msgid "Task received and is processing asynchronously."
+msgstr "Task received and is processing asynchronously."
+
+#: root_app/settings.py:67
+msgid "Traditional Chinese"
+msgstr "Traditional Chinese"
+
+#: root_app/settings.py:68
+msgid "English"
+msgstr "English"
+
+#: templates/base.html:8
+msgid "股價資訊平台 - celery-demo "
+msgstr "Stock Price Platform - celery-demo"
+
+#: templates/base.html:35
+msgid "股價資訊平台"
+msgstr "Stock Platform"
+
+#: templates/base.html:42
+msgid "即時儀表板"
+msgstr "Live Dashboard"
+
+#: templates/base.html:48
+msgid "數據任務管理"
+msgstr "Task Management"
+
+#: templates/base.html:54
+msgid "行情趨勢分析"
+msgstr "Market Trends"
+
+#: templates/base.html:60 templates/crawlers/error_logs.html:5
+msgid "錯誤記錄"
+msgstr "Error Logs"
+
+#: templates/base.html:69
+msgid "System Online"
+msgstr "System Online"
+
+#: templates/base.html:77
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: templates/base.html:174
+msgid "系統已連線"
+msgstr "System Connected"
+
+#: templates/crawlers/charts.html:4 templates/crawlers/charts.html:5
+msgid "股價趨勢"
+msgstr "Price Trends"
+
+#: templates/crawlers/charts.html:47
+msgid "數據篩選"
+msgstr "Data Filter"
+
+#: templates/crawlers/charts.html:53
+msgid "載入任務中..."
+msgstr "Loading tasks..."
+
+#: templates/crawlers/charts.html:56 templates/crawlers/error_logs.html:141
+msgid "重新載入"
+msgstr "Reload"
+
+#: templates/crawlers/charts.html:69
+msgid "最新收盤"
+msgstr "Last Close"
+
+#: templates/crawlers/charts.html:76
+msgid "最高價"
+msgstr "High"
+
+#: templates/crawlers/charts.html:82
+msgid "最低價"
+msgstr "Low"
+
+#: templates/crawlers/charts.html:88
+msgid "漲跌幅"
+msgstr "Change"
+
+#: templates/crawlers/dashboard.html:4
+msgid "任務列表"
+msgstr "Task List"
+
+#: templates/crawlers/dashboard.html:9
+msgid "建立新任務"
+msgstr "Create Task"
+
+#: templates/crawlers/dashboard.html:15
+msgid "系統啟動中..."
+msgstr "System Starting..."
+
+#: templates/crawlers/dashboard.html:25
+msgid "成功"
+msgstr "Success"
+
+#: templates/crawlers/dashboard.html:29
+msgid "操作已完成。"
+msgstr "Operation completed."
+
+#: templates/crawlers/error_logs.html:4
+msgid "錯誤記錄 - celery-demo"
+msgstr "Error Logs - celery-demo"
+
+#: templates/crawlers/error_logs.html:129
+msgid "系統錯誤記錄"
+msgstr "System Error Logs"
+
+#: templates/crawlers/error_logs.html:133
+msgid "等級:"
+msgstr "Level:"
+
+#: templates/crawlers/error_logs.html:135
+msgid "全部"
+msgstr "All"
+
+#: templates/crawlers/error_logs.html:136
+msgid "WARNING"
+msgstr "WARNING"
+
+#: templates/crawlers/error_logs.html:137
+msgid "ERROR"
+msgstr "ERROR"
+
+#: templates/crawlers/error_logs.html:138
+msgid "CRITICAL"
+msgstr "CRITICAL"
+
+#: templates/crawlers/error_logs.html:156
+msgid "時間"
+msgstr "Time"
+
+#: templates/crawlers/error_logs.html:157
+msgid "等級"
+msgstr "Level"
+
+#: templates/crawlers/error_logs.html:158
+msgid "來源"
+msgstr "Source"
+
+#: templates/crawlers/error_logs.html:159
+msgid "關聯任務"
+msgstr "Related Task"
+
+#: templates/crawlers/error_logs.html:160
+msgid "訊息"
+msgstr "Message"
+
+#: templates/crawlers/error_logs.html:167
+msgid "載入中..."
+msgstr "Loading..."
+
+#: templates/crawlers/settings.html:4
+msgid "Settings - Antigravity Trader"
+msgstr "Settings - Antigravity Trader"
+
+#: templates/crawlers/settings.html:5
+msgid "Create Crawler Task"
+msgstr "Create Crawler Task"
+
+#: templates/crawlers/settings.html:81
+msgid "Task Configuration"
+msgstr "Task Configuration"
+
+#: templates/crawlers/settings.html:87
+msgid "Task Name"
+msgstr "Task Name"
+
+#: templates/crawlers/settings.html:91
+msgid "A recognizable name for your crawler task."
+msgstr "A recognizable name for your crawler task."
+
+#: templates/crawlers/settings.html:97
+msgid "Adapter Target"
+msgstr "Adapter Target"
+
+#: templates/crawlers/settings.html:100
+msgid "Yahoo Finance (US/Global)"
+msgstr "Yahoo Finance (US/Global)"
+
+#: templates/crawlers/settings.html:101
+msgid "Taiwan Stock Exchange (TWSE)"
+msgstr "Taiwan Stock Exchange (TWSE)"
+
+#: templates/crawlers/settings.html:106
+msgid "Schedule Time (Optional)"
+msgstr "Schedule Time (Optional)"
+
+#: templates/crawlers/settings.html:109
+msgid "Leave empty for manual triggering only."
+msgstr "Leave empty for manual triggering only."
+
+#: templates/crawlers/settings.html:115
+msgid "股票搜尋"
+msgstr "Stock Search"
+
+#: templates/crawlers/settings.html:121
+msgid "輸入代號或名稱..."
+msgstr "Enter ticker or name..."
+
+#: templates/crawlers/settings.html:130
+msgid "選取股票於此顯示..."
+msgstr "Selected stocks show here..."
+
+#: templates/crawlers/settings.html:134
+msgid "搜尋全球股市或輸入代號並按 Enter 即可加入標籤。"
+msgstr "Search global markets or enter ticker and press Enter to add tag."
+
+#: templates/crawlers/settings.html:141
+msgid "啟用數據任務"
+msgstr "Enable Task"
+
+#: templates/crawlers/settings.html:146
+msgid "Cancel"
+msgstr "Cancel"
+
+#: templates/crawlers/settings.html:149
+msgid "Create Config"
+msgstr "Create Config"
