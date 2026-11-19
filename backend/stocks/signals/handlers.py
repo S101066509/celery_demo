@@ -15,7 +15,7 @@ def sync_periodic_task(sender, instance, created, **kwargs):
     """
     當 StockTask 被儲存時，自動同步建立或更新 Celery Beat 排程。
     """
-    task_name = f"Run Stock Task: {instance.name} (ID:{instance.id})"
+    task_name = f"Run Stock Task (ID:{instance.pk})"
     
     # 如果任務不啟用，或者沒有設定時間，則刪除現有的排程
     if not instance.is_active or not instance.schedule_time:
@@ -49,7 +49,7 @@ def delete_periodic_task(sender, instance, **kwargs):
     """
     當任務從資料庫移除時，連同排程一併清理。
     """
-    task_name = f"Run Stock Task: {instance.name} (ID:{instance.id})"
+    task_name = f"Run Stock Task (ID:{instance.pk})"
     PeriodicTask.objects.filter(name=task_name).delete()
 
 @task_failure.connect

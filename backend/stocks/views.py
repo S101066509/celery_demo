@@ -4,6 +4,8 @@ from django.shortcuts import render
 from django.core.cache import cache
 from rest_framework import viewsets, status, generics
 from rest_framework.views import APIView
+from rest_framework.permissions import BasePermission, SAFE_METHODS
+from django.contrib.admin.views.decorators import staff_member_required
 from rest_framework.response import Response
 from rest_framework.decorators import action
 from rest_framework.filters import OrderingFilter
@@ -26,6 +28,7 @@ def dashboard_view(request):
     """ 主儀表板視圖：列出所有任務與總體狀態。 """
     return render(request, 'stocks/dashboard.html')
 
+@staff_member_required
 def settings_view(request):
     """ 設定視圖：建立/編輯數據任務的介面。 """
     return render(request, 'stocks/settings.html')
@@ -44,14 +47,21 @@ def error_logs_view(request):
 # 這些端點將數據傳回給前端 JavaScript。
 # =============================================================================
 
+class StaffWritePermission(BasePermission):
+    def has_permission(self, request, view):
+        return request.method in SAFE_METHODS or request.user.is_staff
+
+
 class StockTaskViewSet(viewsets.ModelViewSet):
     """ 任務 CRUD 操作的 API 端點。 """
     queryset = StockTask.objects.all().order_by('-id')
     serializer_class = StockTaskSerializer
+    permission_classes = [StaffWritePermission]
 
 class ExecutionListCreateView(generics.ListCreateAPIView):
     """ 用於觸發與列出手動任務執行紀錄的 API 端點。 """
     serializer_class = ExecutionSerializer
+    permission_classes = [StaffWritePermission]
 
     def get_queryset(self):
         task_id = self.kwargs.get('task_id')

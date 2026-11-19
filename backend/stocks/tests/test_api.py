@@ -1,4 +1,4 @@
-import json
+from django.contrib.auth.models import User
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
@@ -16,6 +16,8 @@ class CrawlerAPITest(APITestCase):
         # 需要在之後使用 unittest.mock 來模擬 celery delay
         # 由於我們使用標準快取做鎖定機制，確保測試開始時清空快取
         cache.clear()
+        self.staff = User.objects.create_user(username="operator", is_staff=True)
+        self.client.force_authenticate(self.staff)
 
     def test_get_tasks_list(self):
         """測試能否正確取得任務清單"""
@@ -68,3 +70,13 @@ class CrawlerAPITest(APITestCase):
         self.assertIn("error", response.data)
         
         cache.delete(lock_key)
+
+    def test_only_staff_can_change_or_run_tasks(self):
+        user = User.objects.create_user(username="viewer")
+        for viewer in (None, user):
+            self.client.force_authenticate(viewer)
+            self.assertEqual(self.client.get('/api/v1/tasks/').status_code, 200)
+            self.assertEqual(self.client.post('/api/v1/tasks/', {}).status_code, 403)
+            self.assertEqual(self.client.delete(f'/api/v1/tasks/{self.task.pk}/').status_code, 403)
+            url = reverse('task-executions', kwargs={'task_id': self.task.pk})
+            self.assertEqual(self.client.post(url).status_code, 403)

@@ -72,3 +72,31 @@ class CrawlerModelsTest(TestCase):
             volume=1000000,
             source="twse" # 不同來源
         )
+
+    def test_schedule_tracks_task_across_rename_and_disable(self):
+        from datetime import time
+        from django_celery_beat.models import PeriodicTask
+
+        self.task.schedule_time = time(9)
+        self.task.save()
+        self.task.name = "Renamed"
+        self.task.save()
+        schedules = PeriodicTask.objects.filter(task="stocks.tasks.data_tasks.run_data_task")
+        self.assertEqual(schedules.count(), 1)
+        self.task.is_active = False
+        self.task.save()
+        self.assertFalse(schedules.exists())
+
+    def test_failed_record_marks_execution_failed(self):
+        from unittest.mock import patch
+        from stocks.tasks import run_data_task
+
+        with patch('stocks.tasks.data_tasks.DataAdapterFactory.get_adapter') as factory:
+            factory.return_value.fetch.return_value = {"records": [{"ticker": "AAPL"}], "errors": []}
+            run_data_task.run(self.task.pk)
+        execution = self.task.executions.get()
+        self.task.refresh_from_db()
+        self.assertEqual(execution.status, "FAILED")
+        self.assertEqual(self.task.status, "FAILED")
+        self.assertEqual(execution.records_count, 0)
+        self.assertIn("AAPL", execution.error_log)
