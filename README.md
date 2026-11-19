@@ -24,6 +24,8 @@ docker-compose up --build
 
 ---
 
+任務列表可公開讀取。建立、修改、刪除及手動執行任務時，請先透過「任務設定」登入具有 staff 權限的帳號。首次啟動時可執行 `docker compose exec app python manage.py createsuperuser` 建立管理員。
+
 ## 使用技術
 
 *   後端：Django 5.2（SSR / DRF API）

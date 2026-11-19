@@ -65,6 +65,7 @@ def run_data_task(self, task_id):
         
         # 將記錄存入資料庫
         records_saved = 0
+        save_errors = []
         if result.get("records"):
             for record_data in result["records"]:
                 try:
@@ -88,19 +89,21 @@ def run_data_task(self, task_id):
                     )
                     records_saved += 1
                 except Exception as e:
-                    logger.error(f"儲存記錄失敗: {str(e)}")
+                    message = f"Failed to save record for {record_data.get('ticker', '?')}: {e}"
+                    save_errors.append(message)
+                    logger.error(message)
                     ErrorLog.objects.create(
                         level='WARNING',
                         source='stocks.tasks.run_data_task',
                         task=task,
-                        message=f"Failed to save record for {record_data.get('ticker', '?')}: {str(e)}",
+                        message=message,
                     )
-                    pass
 
         # 更新執行狀態
-        execution.status = 'SUCCESS' if not result.get("errors") else 'FAILED'
+        errors = list(result.get("errors") or []) + save_errors
+        execution.status = 'FAILED' if errors else 'SUCCESS'
         execution.records_count = records_saved
-        execution.error_log = "\n".join(result.get("errors", []))
+        execution.error_log = "\n".join(errors)
         execution.finished_at = timezone.now()
         execution.save()
 
@@ -115,7 +118,7 @@ def run_data_task(self, task_id):
                 )
 
         # 更新任務狀態
-        task.status = 'SUCCESS' if not result.get("errors") else 'FAILED'
+        task.status = execution.status
         task.save()
 
         return f"已完成 - 儲存了 {records_saved} 筆記錄。狀態: {execution.status}"
